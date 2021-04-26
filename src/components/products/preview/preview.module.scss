@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.imgZoomContainer {
+  position: relative;
+}
+.mainImage {
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+}
+.imgZoomResult {
+  position: absolute;
+  left: 103%;
+  top: 0;
+  border: 1px solid #d4d4d4;
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 5;
+}
+
+@media (max-width: 800px) {
+  .imgZoomResult {
+    display: none;
+  }
+}
