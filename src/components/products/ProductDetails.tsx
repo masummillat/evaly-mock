@@ -22,7 +22,7 @@ const ProductDetails: React.FC<any> = () => {
   const [error, setError] = useState<string | null>(null);
 
   const { slug } = useParams<any>();
-  console.log(availableShops);
+
   useEffect(() => {
     if (slug) {
       setLoading(true);
@@ -31,7 +31,6 @@ const ProductDetails: React.FC<any> = () => {
           `https://api-dev.evaly.com.bd/go-catalog/api/v1/public/products/${slug}`,
         )
         .then(function (response) {
-          console.log(response);
           setProductDetails(response.data.data);
           setSelectedProduct(response.data.data.product_variants[0]);
           setLoading(false);

@@ -8,7 +8,6 @@ const HomeComponent: React.FC<any> = () => {
     axios
       .get(`https://api-dev.evaly.com.bd/go-catalog/api/v1/public/products`)
       .then(function (response: any) {
-        console.log(response);
         setProducts(response.data.data);
       })
       .catch(function (err: any) {
